@@ -10,9 +10,10 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
+  // State to keep track of the active section in the navigation
   const [activeSection, setActiveSection] = useState('About Me');
 
-  // Function to handle navigation click
+  // Function to handle navigation click and update the active section
   const handleNavClick = (section) => {
     setActiveSection(section);
   };
@@ -25,6 +26,7 @@ function App() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
+        {/* Conditionally render components based on the active section */}
         {activeSection === 'About Me' && <AboutMe />}
         {activeSection === 'Portfolio' && <Portfolio />}
         {activeSection === 'Contact' && <Contact />}
