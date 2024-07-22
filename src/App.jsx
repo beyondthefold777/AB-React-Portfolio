@@ -1,23 +1,36 @@
-import React from 'react';
+// App.jsx
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Header from './components/Header';
+import AboutMe from './components/AboutMe';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('About Me');
+
+  // Function to handle navigation click
+  const handleNavClick = (section) => {
+    setActiveSection(section);
+  };
+
   return (
     <div className="App">
-      <motion.h1
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Welcome to my Portfolio!
-      </motion.h1>
+      <Header activeSection={activeSection} onNavClick={handleNavClick} />
       <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
-        className="box"
-      />
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        {activeSection === 'About Me' && <AboutMe />}
+        {activeSection === 'Portfolio' && <Portfolio />}
+        {activeSection === 'Contact' && <Contact />}
+        {activeSection === 'Resume' && <Resume />}
+      </motion.div>
+      <Footer />
     </div>
   );
 }
