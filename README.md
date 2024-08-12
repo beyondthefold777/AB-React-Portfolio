@@ -1,8 +1,19 @@
-# React + Vite
+# React Portfolio Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a portfolio application built with React, showcasing my projects, skills, and contact information. The application features a parallax effect, animated components, and a responsive design.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Parallax Effect**: Utilizes `@react-spring/parallax` for a dynamic scrolling experience.
+- **Animated Components**: Uses `framer-motion` for smooth animations.
+- **Responsive Design**: Ensures the application looks great on all devices.
+- **Contact Form**: Includes a form for visitors to get in touch.
+- **Downloadable Resume**: Allows visitors to download the developer's resume.
+
+## Technologies Used
+
+- React
+- React Spring (for parallax effects)
+- Framer Motion (for animations)
+- Tailwind CSS (for styling)
+
