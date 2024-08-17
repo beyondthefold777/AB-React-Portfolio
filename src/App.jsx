@@ -3,10 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Header from './components/Header';
-import AboutMe from './components/AboutMe';
 import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import Resume from './components/Resume';
 import Footer from './components/Footer';
 import marsSky from './assets/marssky.jpg';
 import marsPlanet from './assets/marsplanet.jpg';
@@ -14,7 +11,6 @@ import dopemarspic from './assets/marsmission.jpg';
 import './App.css';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('About Me');
   const [showWelcome, setShowWelcome] = useState(false);
 
   useEffect(() => {
@@ -22,14 +18,9 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleNavClick = (section) => {
-    setActiveSection(section);
-    document.getElementById(section.toLowerCase().replace(' ', '-')).scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div className="App">
-      <Header activeSection={activeSection} onNavClick={handleNavClick} />
+      <Header />
 
       <Parallax pages={3} style={{ top: '0', left: '0', width: '100%', height: '100vh' }}>
         <ParallaxLayer offset={0} speed={0.15} style={{ backgroundImage: `url(${marsSky})`, backgroundSize: 'cover', height: '100vh' }} className="animate-glow" />
@@ -45,7 +36,8 @@ function App() {
           </motion.h1>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={0.3} speed={0.3} className="flex justify-center items-start">
+        {/* Stationary Welcome Text and Bio Box */}
+        <div style={{ position: 'fixed', top: '10%', left: '50%', transform: 'translateX(-50%)', zIndex: 1000 }}>
           <AnimatePresence>
             {showWelcome && (
               <motion.h2
@@ -58,9 +50,9 @@ function App() {
               </motion.h2>
             )}
           </AnimatePresence>
-        </ParallaxLayer>
+        </div>
 
-        <ParallaxLayer offset={0.4} speed={0.3} className="flex justify-center items-start">
+        <div style={{ position: 'fixed', top: '20%', left: '50%', transform: 'translateX(-50%)', zIndex: 1000 }}>
           <AnimatePresence>
             {showWelcome && (
               <motion.div
@@ -69,11 +61,14 @@ function App() {
                 transition={{ duration: 0.5, delay: 1.5 }}
                 className="bio-box p-4 rounded-lg text-center max-w-xs font-normal bg-gradient-to-r from-red-500 to-white"
               >
-                <p>Your bio text goes here. Briefly introduce yourself and your professional background.</p>
+                <p>Explore the depths of the coding world with me! 
+                  My name is Anthony Bell I'm a recent grad of UCF MERN Stack Bootcamp. 
+                  My goals are to grow from learning everything about your company to creating masterful applications 
+                  that solve complex issues, back businesses and change the world let's do it!</p>
               </motion.div>
             )}
           </AnimatePresence>
-        </ParallaxLayer>
+        </div>
 
         <ParallaxLayer offset={0.95} speed={0.4} style={{ backgroundImage: `url(${marsPlanet})`, backgroundSize: 'cover', height: '100vh' }} />
 
@@ -84,10 +79,7 @@ function App() {
             transition={{ duration: 0.3 }}
             className="content"
           >
-            <AboutMe id="about-me" />
             <Portfolio id="portfolio" />
-            <Contact id="contact" />
-            <Resume id="resume" />
           </motion.div>
         </ParallaxLayer>
 
