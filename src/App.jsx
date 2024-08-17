@@ -41,7 +41,7 @@ function App() {
           <AnimatePresence>
             {showWelcome && (
               <motion.h2
-                initial={{ x: '100%', opacity: 0 }}
+                initial={{ x: '-100%', opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.5 }}
                 className="gradient-text-welcome"
@@ -72,7 +72,7 @@ function App() {
 
         <ParallaxLayer offset={0.95} speed={0.4} style={{ backgroundImage: `url(${marsPlanet})`, backgroundSize: 'cover', height: '100vh' }} />
 
-        <ParallaxLayer offset={1} speed={0.2}>
+        <ParallaxLayer offset={0.8} speed={0.2}>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
