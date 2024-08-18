@@ -1,14 +1,15 @@
+// components/Portfolio.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 function Portfolio() {
   const allProjects = [
-    { title: 'Project 1', image: 'hvac2go.png', deployed: '#', github: '#' },
-    { title: 'Project 2', image: 'hitech.png', deployed: '#', github: '#' },
-    { title: 'Project 3', image: 'blogtreepoetry.png', deployed: '#', github: '#' },
-    { title: 'Project 4', image: 'notetaker.png', deployed: '#', github: '#' },
-    { title: 'Project 5', image: 'project5.jpg', deployed: '#', github: '#' },
-    { title: 'Project 6', image: 'project6.jpg', deployed: '#', github: '#' },
+    { title: 'Project 1', image: '/src/assets/hvac2go.png', deployed: '#', github: '#' },
+    { title: 'Project 2', image: '/src/assets/hitech.png', deployed: '#', github: '#' },
+    { title: 'Project 3', image: '/src/assets/blogtreepoetry.png', deployed: '#', github: '#' },
+    { title: 'Project 4', image: '/src/assets/notetaker.png', deployed: '#', github: '#' },
+    { title: 'Project 5', image: '/src/assets/project5.jpg', deployed: '#', github: '#' },
+    { title: 'Project 6', image: '/src/assets/project6.jpg', deployed: '#', github: '#' },
   ];
 
   const [currentPage, setCurrentPage] = useState(0);
@@ -42,7 +43,7 @@ function Portfolio() {
           >
             <div className="project-card-inner">
               <div className="project-card-front">
-                <img src={project.image} alt={project.title} />
+                <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '10px' }} />
                 <h3>{project.title}</h3>
               </div>
               <div className="project-card-back">
@@ -54,10 +55,10 @@ function Portfolio() {
         ))}
       </div>
       <div className="navigation-buttons">
-        <button onClick={handlePrev} className="nav-button prev" style={{ left: '10px' }}>
+        <button onClick={handlePrev} className="nav-button prev" style={{ position: 'absolute', left: '10px', top: '50%' }}>
           <span className="arrow left"></span>
         </button>
-        <button onClick={handleNext} className="nav-button next" style={{ right: '10px' }}>
+        <button onClick={handleNext} className="nav-button next" style={{ position: 'absolute', right: '10px', top: '50%' }}>
           <span className="arrow right"></span>
         </button>
       </div>

@@ -84,7 +84,7 @@ button:focus-visible {
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(45deg, #ff1900, #FFFFFF);
+  background: -webkit-linear-gradient(45deg, #b8390b, #FFFFFF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3em;

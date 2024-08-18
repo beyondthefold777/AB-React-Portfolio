@@ -1,8 +1,10 @@
+// App.jsx
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Header from './components/Header';
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import marsSky from './assets/marssky.jpg';
 import marsPlanet from './assets/marsplanet.jpg';
@@ -71,7 +73,7 @@ function App() {
 
         <ParallaxLayer offset={0.95} speed={0.4} style={{ backgroundImage: `url(${marsPlanet})`, backgroundSize: 'cover', height: '100vh' }} />
 
-        <ParallaxLayer offset={0.75} speed={0.2}>
+        <ParallaxLayer offset={0.8} speed={0.2}>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -83,6 +85,22 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer offset={1.47} speed={0.2} style={{ backgroundImage: `url(${dopemarspic})`, backgroundSize: '100%', height: '100%' }} />
+
+        {/* Contact Form and CV Download */}
+        <ParallaxLayer offset={2} speed={0.2} className="flex justify-center items-center">
+          <div className="contact-section">
+            <Contact />
+            <motion.a
+              href="resume.pdf"
+              download
+              className="cv-download"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Download Resume
+            </motion.a>
+          </div>
+        </ParallaxLayer>
       </Parallax>
       <Footer />
     </div>
