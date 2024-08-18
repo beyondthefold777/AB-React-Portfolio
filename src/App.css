@@ -1,5 +1,3 @@
-/* App.css */
-/* App.css */
 #root {
   width: 100%;
   text-align: center;
@@ -83,6 +81,7 @@ section {
   font-size: 0.9em; 
   position: relative;
 }
+
 .gradient-text-welcome {
   background: -webkit-linear-gradient(45deg, #FF0000, #FFFFFF);
   -webkit-background-clip: text;
@@ -90,6 +89,7 @@ section {
   font-size: 2em;
   font-weight: bold;
 }
+
 /* Add this to your existing App.css or a new CSS file */
 .portfolio-section {
   display: flex;
@@ -149,25 +149,28 @@ section {
 }
 
 .project-card-back {
-  background: linear-gradient(to right, #FF4000, white); 
+  background: linear-gradient(to right, #b8390b, white); /* Match the bio box color */
   color: white;
   transform: rotateY(180deg);
 }
 
 .project-card-back a {
-  color: blue; /
+  color: blue; /* Links on the back are blue */
   text-decoration: none;
   margin: 10px 0;
 }
 
 .navigation-buttons {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: space-between;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .nav-button {
-  background-color: #FF4500; /* Reddish color */
+  background-color: #FF4500; 
   border: none;
   color: white;
   padding: 10px 20px;
@@ -184,7 +187,7 @@ section {
 }
 
 .nav-button:hover {
-  background-color: #d52809; /* Slightly lighter reddish color */
+  background-color: #FF6347; 
 }
 
 .arrow {
@@ -204,4 +207,21 @@ section {
 
 .arrow.right {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.contact-section {
+  background: linear-gradient(to bottom, red, black);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: bold;
 }

@@ -28,8 +28,8 @@ function Contact() {
   };
 
   return (
-    <section id="contact">
-      <form>
+    <section id="contact" className="contact-section">
+      <form className="contact-form">
         <motion.div
           className="form-group"
           initial={{ opacity: 0, y: 20 }}

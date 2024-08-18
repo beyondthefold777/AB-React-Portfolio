@@ -1,13 +1,12 @@
-// components/Portfolio.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 function Portfolio() {
   const allProjects = [
-    { title: 'Project 1', image: 'project1.jpg', deployed: '#', github: '#' },
-    { title: 'Project 2', image: 'project2.jpg', deployed: '#', github: '#' },
-    { title: 'Project 3', image: 'project3.jpg', deployed: '#', github: '#' },
-    { title: 'Project 4', image: 'project4.jpg', deployed: '#', github: '#' },
+    { title: 'Project 1', image: 'hvac2go.png', deployed: '#', github: '#' },
+    { title: 'Project 2', image: 'hitech.png', deployed: '#', github: '#' },
+    { title: 'Project 3', image: 'blogtreepoetry.png', deployed: '#', github: '#' },
+    { title: 'Project 4', image: 'notetaker.png', deployed: '#', github: '#' },
     { title: 'Project 5', image: 'project5.jpg', deployed: '#', github: '#' },
     { title: 'Project 6', image: 'project6.jpg', deployed: '#', github: '#' },
   ];
@@ -55,10 +54,10 @@ function Portfolio() {
         ))}
       </div>
       <div className="navigation-buttons">
-        <button onClick={handlePrev} className="nav-button prev">
+        <button onClick={handlePrev} className="nav-button prev" style={{ left: '10px' }}>
           <span className="arrow left"></span>
         </button>
-        <button onClick={handleNext} className="nav-button next">
+        <button onClick={handleNext} className="nav-button next" style={{ right: '10px' }}>
           <span className="arrow right"></span>
         </button>
       </div>

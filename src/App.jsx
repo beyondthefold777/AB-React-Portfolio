@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
@@ -72,7 +71,7 @@ function App() {
 
         <ParallaxLayer offset={0.95} speed={0.4} style={{ backgroundImage: `url(${marsPlanet})`, backgroundSize: 'cover', height: '100vh' }} />
 
-        <ParallaxLayer offset={0.8} speed={0.2}>
+        <ParallaxLayer offset={0.75} speed={0.2}>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
