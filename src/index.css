@@ -13,7 +13,12 @@
     filter: brightness(.8) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
   }
 }
-
+.App {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 1700px;
+}
 .animate-glow {
   animation: glow 4s infinite;
 }
