@@ -4,10 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Header from './components/Header';
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import marsSky from './assets/marssky.jpg';
 import marsPlanet from './assets/marsplanet.jpg';
-import dopemarspic from './assets/marsmission.jpg';
+import dopemarspic from './assets/marsoasis2.png';
 import './App.css';
 
 function App() {
@@ -30,19 +31,8 @@ function App() {
       <Parallax pages={3} style={{ top: '0', left: '0', width: '100%', height: '100vh' }}>
         <ParallaxLayer offset={0} speed={0.15} style={{ backgroundImage: `url(${marsSky})`, backgroundSize: 'cover', height: '100vh' }} className="animate-glow" />
 
-        <ParallaxLayer offset={0} speed={0.1} className="flex justify-center items-center">
-          <motion.h1
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            transition={{ duration: 2, ease: 'easeInOut' }}
-            className="gradient-text"
-          >
-            Journey with me
-          </motion.h1>
-        </ParallaxLayer>
-
         {/* Stationary Welcome Text and Bio Description */}
-        <div style={{ position: 'fixed', top: '10%', left: '50%', transform: 'translateX(-50%)', zIndex: 1000 }}>
+        <div style={{ position: 'absolute', top: '10%', left: '57%', transform: 'translateX(-50%)', zIndex: 1000 }}>
           <AnimatePresence>
             {showWelcome && (
               <motion.h2
@@ -57,36 +47,49 @@ function App() {
           </AnimatePresence>
         </div>
 
-        <div style={{ position: 'fixed', top: '20%', left: '55%', transform: 'translateX(-50%)', zIndex: 1000 }}>
-  <AnimatePresence>
-    {showBio && (
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-        style={{ color: '#b8390b', fontSize: '1.2em' }}
-      >
-        Explore the depths of the coding world with me! My name is Anthony Bell I'm a recent grad of UCF MERN Stack Bootcamp. My goals are to grow from learning everything about your company to creating masterful applications that solve complex issues, back businesses and change the world let's do it!
-      </motion.p>
-    )}
-  </AnimatePresence>
-</div>
+        <div style={{ position: 'fixed', top: '15%', left: '60%', transform: 'translateX(-50%)', zIndex: 1000 }}>
+          <AnimatePresence>
+            {showBio && (
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                style={{ color: '#b8390b', fontSize: '1.2em' }}
+              >
+                Explore the depths of the coding world with me! My name is Anthony Bell I'm a recent grad of UCF MERN Stack Bootcamp. My goals are to grow from learning everything about your company to creating masterful applications that solve complex issues, back businesses and change the world let's do it!
+              </motion.p>
+            )}
+          </AnimatePresence>
+        </div>
 
         <ParallaxLayer offset={0.95} speed={0.4} style={{ backgroundImage: `url(${marsPlanet})`, backgroundSize: 'cover', height: '100vh' }} />
 
-        <ParallaxLayer offset={0.8} speed={0.2}>
+        <ParallaxLayer offset={0.95} speed={0.4}>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
             className="content"
           >
-            <h2 style={{ color: '#b8390b', textAlign: 'center', marginBottom: '50px' }}>Portfolio</h2>
-            <Portfolio id="portfolio" />
+            <h2 className="gradient-text-portfolio" style={{ textAlign: 'center', marginBottom: '10px', fontSize: '2em' }}>Portfolio</h2>
+            <Portfolio id="Portfolio" />
           </motion.div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={1.47} speed={0.2} style={{ backgroundImage: `url(${dopemarspic})`, backgroundSize: '100%', height: '100%' }} />
+
+        {/* Contact Section */}
+        <ParallaxLayer offset={2} speed={0.5}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className="content"
+          >
+            <h2 className="gradient-text-portfolio" style={{ textAlign: 'center', marginBottom: '10px', fontSize: '2em' }}>Contact</h2>
+            <Contact />
+          </motion.div>
+        </ParallaxLayer>
       </Parallax>
       <Footer />
     </div>

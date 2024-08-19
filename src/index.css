@@ -17,7 +17,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  height: 1700px;
+  height: 100vh;
 }
 .animate-glow {
   animation: glow 4s infinite;
