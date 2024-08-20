@@ -31,7 +31,7 @@ function App() {
       <Parallax pages={3} style={{ top: '0', left: '0', width: '100%', height: '100vh' }}>
         <ParallaxLayer offset={0} speed={0.15} style={{ backgroundImage: `url(${marsSky})`, backgroundSize: 'cover', height: '100vh' }} className="animate-glow" />
 
-        {/* Stationary Welcome Text and Bio Description */}
+        {/* S */}
         <div style={{ position: 'absolute', top: '10%', left: '57%', transform: 'translateX(-50%)', zIndex: 1000 }}>
           <AnimatePresence>
             {showWelcome && (
@@ -64,7 +64,7 @@ function App() {
 
         <ParallaxLayer offset={0.95} speed={0.4} style={{ backgroundImage: `url(${marsPlanet})`, backgroundSize: 'cover', height: '100vh' }} />
 
-        <ParallaxLayer offset={0.95} speed={0.4}>
+        <ParallaxLayer offset={1.2} speed={0.4}>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -79,17 +79,19 @@ function App() {
         <ParallaxLayer offset={1.47} speed={0.2} style={{ backgroundImage: `url(${dopemarspic})`, backgroundSize: '100%', height: '100%' }} />
 
         {/* Contact Section */}
-        <ParallaxLayer offset={2} speed={0.5}>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            className="content"
-          >
-            <h2 className="gradient-text-portfolio" style={{ textAlign: 'center', marginBottom: '10px', fontSize: '2em' }}>Contact</h2>
-            <Contact />
-          </motion.div>
-        </ParallaxLayer>
+        <ParallaxLayer offset={1.7} speed={0.5}>
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.3 }}
+    className="content"
+    style={{ marginTop: '500px' }} /* Adjust this value as needed */
+  >
+    <h2 className="gradient-text-portfolio" style={{ textAlign: 'center', marginBottom: '10px', fontSize: '2em' }}>Contact</h2>
+    <Contact />
+  </motion.div>
+</ParallaxLayer>
+
       </Parallax>
       <Footer />
     </div>
