@@ -3,7 +3,6 @@
 
 
 
-
 .cursor {
   position: absolute;
   pointer-events: none;
@@ -317,24 +316,40 @@ section {
 
 
 
-.contact-section form label,
-.contact-section form input,
-.contact-section form textarea,
-.contact-section form button {
-  color: #000; 
+/* Adjust the contact form styles */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 100px; /* Adjust this value as needed */
 }
 
-.contact-section form input,
-.contact-section form textarea {
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px; /* Adjust the width as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  display: block;
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.7); 
+  margin-bottom: 10px;
 }
 
-.contact-section form button {
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #b8390b;
+  border-radius: 5px;
+}
+
+.contact-form button {
   background-color: #007bff;
   border: none;
   color: white;
@@ -343,11 +358,16 @@ section {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 4px 0;
   cursor: pointer;
   border-radius: 5px;
 }
 
-.contact-section form button:hover {
+.contact-form button:hover {
   background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
 }

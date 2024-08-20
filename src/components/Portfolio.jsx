@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 function Portfolio() {
   const allProjects = [
-    { title: 'Project 1', image: '/src/assets/hvac2go.png', deployed: '#', github: '#' },
-    { title: 'Project 2', image: '/src/assets/hitech.png', deployed: '#', github: '#' },
-    { title: 'Project 3', image: '/src/assets/blogtreepoetry.png', deployed: '#', github: '#' },
-    { title: 'Project 4', image: '/src/assets/notetaker.png', deployed: '#', github: '#' },
-    { title: 'Project 5', image: '/src/assets/project5.jpg', deployed: '#', github: '#' },
-    { title: 'Project 6', image: '/src/assets/project6.jpg', deployed: '#', github: '#' },
+    { title: 'Project 1', image: '/assets/hvac2go.png', deployed: '#', github: '#' },
+    { title: 'Project 2', image: '/assets/hitech.png', deployed: '#', github: '#' },
+    { title: 'Project 3', image: '/assets/blogtreepoetry.png', deployed: '#', github: '#' },
+    { title: 'Project 4', image: '/assets/notetaker.png', deployed: '#', github: '#' },
+    { title: 'Project 5', image: '/assets/project5.jpg', deployed: '#', github: '#' },
+    { title: 'Project 6', image: '/assets/project6.jpg', deployed: '#', github: '#' },
   ];
 
   const [currentPage, setCurrentPage] = useState(0);

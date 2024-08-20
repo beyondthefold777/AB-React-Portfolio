@@ -1,4 +1,3 @@
-// contact.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -30,7 +29,7 @@ function Contact() {
 
   return (
     <section id="contact" className="contact-section">
-      <form className="transparent-form">
+      <form className="contact-form">
         <motion.div
           className="form-group"
           initial={{ opacity: 0, y: 20 }}
