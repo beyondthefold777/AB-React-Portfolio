@@ -5,7 +5,6 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Header from './components/Header';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -73,7 +72,8 @@ function App() {
           </motion.div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1.47} speed={0.2} style={{ backgroundImage: `url(/assets/marsoasis2.png)`, backgroundSize: '100%', height: '100%' }} />
+        <ParallaxLayer offset={1.47} speed={0.2} style={{ backgroundImage: `url(/assets/marsoasis2.png)`, backgroundSize: 'cover', backgroundRepeat: 'no repeat', height: '70%' }} />
+
 
         {/* Contact Section */}
         <ParallaxLayer offset={1.7} speed={0.5}>
@@ -90,7 +90,6 @@ function App() {
         </ParallaxLayer>
 
       </Parallax>
-      <Footer />
     </div>
   );
 }

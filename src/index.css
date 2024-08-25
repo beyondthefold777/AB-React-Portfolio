@@ -13,16 +13,12 @@
     filter: brightness(.8) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
   }
 }
-.App {
-  text-align: center;
-  position: relative;
- background-size: cover;
-}
+
 .animate-glow {
   animation: glow 4s infinite;
 }
 
-/* :root {
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -32,7 +28,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-} */
+}
 
 a {
   font-weight: 500;
@@ -80,18 +76,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-.gradient-text-layer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.gradient-text {
-  background: -webkit-linear-gradient(45deg, #b8390b, #FFFFFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 3em;
-  font-weight: bold;
-}
-

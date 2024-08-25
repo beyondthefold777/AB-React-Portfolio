@@ -1,7 +1,14 @@
-/* App.css */
+#root {
+  width: 100%;
+  text-align: center;
+}
 
-
-
+.App {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
 
 .cursor {
   position: absolute;
@@ -64,7 +71,6 @@
   display: inline-block;
 }
 
-
 .dropdown-content {
   display: block;
   position: absolute;
@@ -74,14 +80,12 @@
   z-index: 1;
 }
 
-
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
 
 .dropdown-content a:hover {background-color: #f1f1f1}
 
@@ -266,7 +270,6 @@ section {
   position: relative;
 }
 
-
 .contact-section form {
   background-color: rgba(255, 255, 255, 0.0); /* Fully transparent background */
   padding: 20px;
@@ -314,42 +317,24 @@ section {
   background-color: #0056b3;
 }
 
-
-
-/* Adjust the contact form styles */
-.contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin-top: 100px; /* Adjust this value as needed */
+.contact-section form label,
+.contact-section form input,
+.contact-section form textarea,
+.contact-section form button {
+  color: #000; 
 }
 
-.contact-form {
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px; /* Adjust the width as needed */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form label,
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-  display: block;
+.contact-section form input,
+.contact-section form textarea {
   width: 100%;
-  margin-bottom: 10px;
-}
-
-.contact-form input,
-.contact-form textarea {
   padding: 10px;
-  border: 1px solid #b8390b;
+  margin: 10px 0;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7); 
 }
 
-.contact-form button {
+.contact-section form button {
   background-color: #007bff;
   border: none;
   color: white;
@@ -358,16 +343,11 @@ section {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 0;
+  margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
 }
 
-.contact-form button:hover {
+.contact-section form button:hover {
   background-color: #0056b3;
-}
-
-.error {
-  color: red;
-  font-size: 0.8em;
 }
