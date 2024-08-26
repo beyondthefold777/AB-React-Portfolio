@@ -17,3 +17,5 @@ This is a portfolio application built with React, showcasing my projects, skills
 - Framer Motion (for animations)
 - Tailwind CSS (for styling)
 
+## Deployed App
+https://incandescent-melomakarona-756a29.netlify.app
