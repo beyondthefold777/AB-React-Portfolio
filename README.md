@@ -8,7 +8,7 @@ This is a portfolio application built with React, showcasing my projects, skills
 - **Animated Components**: Uses `framer-motion` for smooth animations.
 - **Responsive Design**: Ensures the application looks great on all devices.
 - **Contact Form**: Includes a form for visitors to get in touch.
-- **Downloadable Resume**: Allows visitors to download the developer's resume.
+- **Downloadable Resume**: Allows visitors to download my resume.
 
 ## Technologies Used
 
@@ -17,3 +17,5 @@ This is a portfolio application built with React, showcasing my projects, skills
 - Framer Motion (for animations)
 - Tailwind CSS (for styling)
 
+## Deployed App
+https://incandescent-melomakarona-756a29.netlify.app
