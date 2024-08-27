@@ -19,7 +19,7 @@ function Contact() {
   const handleBlur = (e) => {
     const { name, value } = e.target;
     if (!value) {
-      setErrors({ ...errors, [name]: 'This field is required' });
+      setErrors({ ...errors, [name]: '' });
     } else if (name === 'email' && !validateEmail(value)) {
       setErrors({ ...errors, email: 'Invalid email address' });
     } else {
@@ -30,14 +30,14 @@ function Contact() {
 
   return (
     <section id="contact">
-      <form>
+      <form style={{ width: '25%', margin: 'auto', textAlign: 'left' }}>
         <motion.div
           className="form-group"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <label htmlFor="name" style={{ color: '#b8390b' }}>Name</label>
+          <label htmlFor="name" style={{ color: 'black' }}>Name</label>
           <input
             type="text"
             id="name"
@@ -45,7 +45,7 @@ function Contact() {
             value={formData.name}
             onChange={handleChange}
             onBlur={handleBlur}
-            style={{ color: '#b8390b' }}
+            style={{ background: 'transparent', border: '2px solid #000', color: 'black', width: '100%', padding: '10px', margin: '10px 0', borderRadius: '5px' }}
           />
           {errors.name && <span className="error">{errors.name}</span>}
         </motion.div>
@@ -55,7 +55,7 @@ function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          <label htmlFor="email" style={{ color: '#b8390b' }}>Email</label>
+          <label htmlFor="email" style={{ color: 'black' }}>Email</label>
           <input
             type="email"
             id="email"
@@ -63,7 +63,7 @@ function Contact() {
             value={formData.email}
             onChange={handleChange}
             onBlur={handleBlur}
-            style={{ color: '#b8390b' }}
+            style={{ background: 'transparent', border: '2px solid #000', color: 'black', width: '100%', padding: '10px', margin: '10px 0', borderRadius: '5px' }}
           />
           {errors.email && <span className="error">{errors.email}</span>}
         </motion.div>
@@ -73,14 +73,14 @@ function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <label htmlFor="message" style={{ color: '#b8390b' }}>Message</label>
+          <label htmlFor="message" style={{ color: 'black' }}>Message</label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
             onBlur={handleBlur}
-            style={{ color: '#b8390b' }}
+            style={{ background: 'transparent', border: '2px solid #000', color: 'black', width: '100%', padding: '10px', margin: '10px 0', borderRadius: '5px' }}
           />
           {errors.message && <span className="error">{errors.message}</span>}
         </motion.div>
@@ -88,14 +88,14 @@ function Contact() {
           type="submit"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          style={{ color: '#b8390b' }}
+          style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}
         >
           Submit
         </motion.button>
       </form>
       <div className="social-icons" style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}>
         <motion.a
-          href="https://github.com"
+          href="https://github.com/beyondthefold777"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           style={{ margin: '0 10px' }}
@@ -103,7 +103,7 @@ function Contact() {
           <GitHubIcon />
         </motion.a>
         <motion.a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/anthony-bell89"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           style={{ margin: '0 10px' }}

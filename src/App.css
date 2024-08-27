@@ -135,7 +135,7 @@ section {
   margin-top: -530px; 
 }
 .gradient-text-portfolio {
-  background: -webkit-linear-gradient(45deg, #b8390b, #FFFFFF);
+  background: -webkit-linear-gradient(45deg, #db1507, #FFFFFF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2em;
@@ -261,22 +261,7 @@ section {
 .arrow.right {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.contact-section {
-  margin-top: 300px;
-}
 
-.contact-section h2 {
-  top: 600px;
-  position: relative;
-}
-
-.contact-section form {
-  background-color: rgba(255, 255, 255, 0.0); /* Fully transparent background */
-  padding: 20px;
-  border-radius: 10px;
-  position: relative;
-  top: -600px;
-}
 .transparent-form {
   background-color: transparent !important;
   border: none !important;
@@ -317,11 +302,38 @@ section {
   background-color: #0056b3;
 }
 
+
+
+
+
+.contact-section {
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section h2 {
+  top: 600px;
+  position: relative;
+  color: black;
+}
+
+.contact-section form {
+  background-color: rgba(255, 255, 255, 0.0); /* Fully transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  top: -600px;
+  width: 50%;
+  margin: auto; /* Center the form */
+}
+
 .contact-section form label,
 .contact-section form input,
 .contact-section form textarea,
 .contact-section form button {
-  color: #000; 
+  color: black; /* Ensure the text is black */
 }
 
 .contact-section form input,
@@ -329,25 +341,25 @@ section {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #; 
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.7); 
 }
 
 .contact-section form button {
-  background-color: #007bff;
+  background-color: blue; /* Blue submit button */
   border: none;
   color: white;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block; /* Change to block to center align */
+  margin: 20px auto; /* Center the button */
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .contact-section form button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker blue on hover */
 }

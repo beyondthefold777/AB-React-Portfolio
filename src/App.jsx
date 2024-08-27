@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const timer = setTimeout(() => setShowWelcome(true), 2000);
-    const bioTimer = setTimeout(() => setShowBio(true), 4000); // Bio appears after welcome and journey animations
+    const bioTimer = setTimeout(() => setShowBio(true), 4000); 
     return () => {
       clearTimeout(timer);
       clearTimeout(bioTimer);
@@ -72,7 +72,7 @@ function App() {
           </motion.div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1.47} speed={0.2} style={{ backgroundImage: `url(/assets/marsoasis2.png)`, backgroundSize: 'cover', backgroundRepeat: 'no repeat', height: '70%' }} />
+        <ParallaxLayer offset={1.47} speed={0.2} style={{ backgroundImage: `url(/assets/marsoasis2.png)`, backgroundSize: 'cover', backgroundRepeat: 'no repeat', height: '60%' }} />
 
 
         {/* Contact Section */}
@@ -82,7 +82,7 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
             className="content"
-            style={{ marginTop: '500px' }} /* Adjust this value as needed */
+            style={{ marginTop: '500px' }} 
           >
             <h2 className="gradient-text-portfolio" style={{ textAlign: 'center', marginBottom: '10px', fontSize: '2em' }}>Contact</h2>
             <Contact />
